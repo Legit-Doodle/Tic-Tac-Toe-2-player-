@@ -79,7 +79,7 @@ public class TicTacToe {
 			System.out.println("Congratulations!! "+user1+" is the winner!!");
 		}
 		else if(winnerTwo) {
-			System.out.println("Congratulations!! "+user1+" is the winner!!");
+			System.out.println("Congratulations!! "+user2+" is the winner!!");
 		}
 		
 		return (winnerOne||winnerTwo);
@@ -147,10 +147,11 @@ public class TicTacToe {
 			}
 			displayBoard();
 			if(checkWinner(one)) {
-				break;
+				return;
 			}
 			moveCount++;
 		}
+		System.out.println("It's a draw!!");
 	}
 }
 
